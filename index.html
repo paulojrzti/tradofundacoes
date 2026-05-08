@@ -10,13 +10,14 @@
   <meta property="og:description" content="Execução técnica rigorosa para obras em Goiânia. Equipamento próprio, prazo cumprido, orçamento direto com quem decide.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/hero-1024.webp" imagesrcset="assets/hero-640.webp 640w, assets/hero-1024.webp 1024w, assets/hero-1536.webp 1536w" imagesizes="100vw">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5NQ33Q5Z');</script>
+  })(window,document,'script','dataLayer','GTM-T78P9WR9');</script>
   <!-- End Google Tag Manager -->
   <style>
     /* ─── RESET & BASE ─── */
@@ -98,10 +99,10 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('assets/hero.png');
-      background-size: cover;
-      background-position: center 30%;
-      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
       transform: scale(1.04);
       transition: transform 8s ease;
     }
@@ -570,7 +571,6 @@
       padding-bottom: 48px;
       border-bottom: 1px solid var(--dark-4);
     }
-    .footer-brand {}
     .footer-logo img { height: 40px; filter: brightness(0.95); margin-bottom: 16px; }
     .footer-brand p {
       font-size: 13px;
@@ -669,7 +669,7 @@
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NQ33Q5Z"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T78P9WR9"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
@@ -678,7 +678,7 @@
   ════════════════════════════════ -->
   <header class="header" id="header">
     <a href="#" class="logo" aria-label="Trado Fundações">
-      <img src="assets/logo.png" alt="Trado Fundações">
+      <img src="assets/logo.png" alt="Trado Fundações" width="712" height="243" decoding="async" fetchpriority="high">
     </a>
     <a href="https://wa.me/5562993764522?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20de%20fundação%20em%20estaca%20escavada." class="header-cta" target="_blank" rel="noopener">Solicitar Orçamento da Minha Obra</a>
   </header>
@@ -687,7 +687,31 @@
        HERO
   ════════════════════════════════ -->
   <section class="hero" id="hero" aria-label="estaca escavada Goiânia">
-    <div class="hero-bg" id="heroBg"></div>
+    <picture>
+      <source
+        srcset="assets/hero-640.avif 640w, assets/hero-1024.avif 1024w, assets/hero-1536.avif 1536w"
+        sizes="100vw"
+        type="image/avif"
+      >
+      <source
+        srcset="assets/hero-640.webp 640w, assets/hero-1024.webp 1024w, assets/hero-1536.webp 1536w"
+        sizes="100vw"
+        type="image/webp"
+      >
+      <img
+        src="assets/hero.png"
+        srcset="assets/hero.png 1536w"
+        sizes="100vw"
+        alt="Máquina trado perfurando o solo em obra pesada"
+        class="hero-bg"
+        id="heroBg"
+        width="1536"
+        height="1024"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async"
+      >
+    </picture>
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
@@ -704,7 +728,7 @@
 
       <ul class="hero-bullets reveal reveal-delay-3">
         <li>Equipamento próprio (trado) disponível imediatamente</li>
-        <li>Atendimento a obras residenciais, prediais e usinas solares</li>
+        <li>Atendimento a obras residenciais, prediais, usinas solares e silos</li>
         <li>Equipe técnica experiente em projetos de alto volume</li>
       </ul>
 
@@ -791,7 +815,7 @@
         </div>
 
         <div class="promise-image-wrap reveal reveal-delay-2">
-          <img src="assets/maquinadefurar.jpg" alt="Máquina trado em operação de fundação" loading="lazy">
+          <img src="assets/maquinadefurar.jpg" alt="Máquina trado em operação de fundação" loading="lazy" width="960" height="1280" decoding="async">
           <div class="promise-image-badge">Equipamento próprio</div>
         </div>
       </div>
@@ -848,7 +872,7 @@
             <path d="M24 6L28.09 16.26L40 18.18L32 26L33.82 38L24 33L14.18 38L16 26L8 18.18L19.91 16.26L24 6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
           </svg>
           <h3>Experiência em obras<br>de alta exigência</h3>
-          <p>Se atendemos usinas solares com dezenas de estacas, atendemos qualquer obra com folga técnica e operacional.</p>
+          <p>Se atendemos usinas solares e silos com dezenas de estacas, atendemos qualquer obra com folga técnica e operacional.</p>
         </div>
       </div>
     </div>
@@ -869,23 +893,23 @@
 
       <div class="proof-gallery">
         <div class="proof-gallery-item reveal">
-          <img src="assets/furacaocommaquina.JPG" alt="Trado mecânico em operação de perfuração" loading="lazy">
+          <img src="assets/furacaocommaquina.JPG" alt="Trado mecânico em operação de perfuração" loading="lazy" width="960" height="1280" decoding="async">
           <div class="img-label"></div>
         </div>
         <div class="proof-gallery-item reveal reveal-delay-1">
-          <img src="assets/lcoaldefuracaoanguloaberto.JPG" alt="Local de perfuração para estacas" loading="lazy">
+          <img src="assets/lcoaldefuracaoanguloaberto.JPG" alt="Local de perfuração para estacas" loading="lazy" width="720" height="1280" decoding="async">
           <div class="img-label"></div>
         </div>
         <div class="proof-gallery-item reveal reveal-delay-2">
-          <img src="assets/maquinafurandoangulolateral.JPG" alt="Máquina trado operando em campo" loading="lazy">
+          <img src="assets/maquinafurandoangulolateral.JPG" alt="Máquina trado operando em campo" loading="lazy" width="478" height="850" decoding="async">
           <div class="img-label"></div>
         </div>
         <div class="proof-gallery-item reveal reveal-delay-3">
-          <img src="assets/e40cfd36-88dc-4e6d-a57b-61089e50aa5a.JPG" alt="Detalhe de obra de fundação" loading="lazy">
+          <img src="assets/e40cfd36-88dc-4e6d-a57b-61089e50aa5a.JPG" alt="Detalhe de obra de fundação" loading="lazy" width="960" height="1280" decoding="async">
           <div class="img-label"></div>
         </div>
         <div class="proof-gallery-item reveal reveal-delay-4">
-          <img src="assets/hero.png" alt="Vista geral de obra de fundação em Goiânia" loading="lazy">
+          <img src="assets/hero.png" alt="Vista geral de obra de fundação em Goiânia" loading="lazy" width="1536" height="1024" decoding="async">
           <div class="img-label"></div>
         </div>
       </div>
@@ -943,7 +967,7 @@
               </span>
             </div>
             <div class="faq-answer">
-              <p>Atendemos desde obras residenciais compactas até projetos industriais e usinas solares com dezenas de estacas. <strong>Se o seu projeto tem volume, melhor ainda é exatamente aí que nossa operação com equipamento próprio faz diferença.</strong></p>
+              <p>Atendemos desde obras residenciais compactas até projetos industriais, usinas solares e silos com dezenas de estacas. <strong>Se o seu projeto tem volume, melhor ainda é exatamente aí que nossa operação com equipamento próprio faz diferença.</strong></p>
             </div>
           </div>
 
@@ -1019,7 +1043,7 @@
 
       <!-- Marca -->
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="Trado Fundações">
+        <img src="assets/logo.png" alt="Trado Fundações" width="712" height="243" loading="lazy" decoding="async">
         <p>Especialistas em fundação em estaca escavada para obras em Goiânia e região. Equipamento próprio, equipe técnica e prazo cumprido.</p>
       </div>
 
@@ -1031,6 +1055,7 @@
           <li>Fundação para obras residenciais</li>
           <li>Fundação para obras prediais</li>
           <li>Fundação para usinas solares</li>
+          <li>Fundação para silos</li>
           <li>Projetos industriais</li>
         </ul>
       </div>
